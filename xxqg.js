@@ -62,18 +62,18 @@ function touchList(findText,unleft,scrollIndex,share){
             try{
                 child.parent().click();
                 readSum = readSum + 1;
-                console.log("电机的按钮----"+child.bounds());
-                if( share && shareCount < 3){
-                    sleep(2000);
-                    // 分享 先去掉
-                    // SharePgae();
-                    sleep(2000);
-                    // 评论 先去掉
-                   // Comments();
-                    sleep(2000);
-                    shareCount = shareCount + 1;
-                }
-                sleep(3000);
+                console.log("点击的按钮----"+child.bounds());
+//                 if( share && shareCount < 3){
+//                     sleep(2000);
+//                     // 分享 先去掉
+//                     // SharePgae();
+//                     sleep(2000);
+//                     // 评论 先去掉
+//                    // Comments();
+//                     sleep(2000);
+//                     shareCount = shareCount + 1;
+//                 }
+                sleep(65000);
                 goBack();
                 sleep(2000);
             }catch (error) {
@@ -130,10 +130,10 @@ function LocalAction(){
      // 1.切换到要闻
      goToHome();
      sleep(2000);
-     className("android.widget.TextView").text("江西").findOne().parent().click();
+     className("android.widget.TextView").text("北京").findOne().parent().click();
     //  2.找寻本地功能
     // let viewBounds = id("view_pager").findOne(2000).bounds();
-    let tmpButtonArray = className("android.widget.TextView").text("江西学习平台").find();
+    let tmpButtonArray = className("android.widget.TextView").text("北京学习平台").find();
     let workButton = tmpButtonArray.get(0);
     console.log(workButton.bounds());
     workButton.parent().click();
